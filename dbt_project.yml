@@ -1,0 +1,17 @@
+name: dbtsnow
+profile: dbtsnow
+model-paths: ["models"]
+macro-paths: ["macros"]
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+
+models:
+  dbtsnow:
+    +static_analysis: strict
+    # Materialize staging models as views, and marts as tables
+    stags:
+      +materialized: table
+    marts:
+      +materialized: table

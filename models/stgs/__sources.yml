@@ -1,0 +1,11 @@
+
+version: 2
+sources:
+  - name: raw
+    database: data
+    schema: raw
+    tables:
+      - name: raw_products
+      - name: raw_customers
+      - name: raw_shipments
+      - name: raw_invoices
